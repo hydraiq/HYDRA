@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bashCURL_DIR
+
 THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
@@ -60,4 +61,6 @@ exit 1
 fi
 cd $THIS_DIR && sudo chmod +x tg
 lua Hydra.lua
+CURL_DIR
+
 fi
