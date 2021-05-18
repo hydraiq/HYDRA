@@ -46,21 +46,18 @@ sudo timedatectl set-timezone Asia/Baghdad
 
 echo -e "| This Source Was Developed By (@DNPLA) |"
 echo -e "|   This Is The Source Channel @P_PP2 .  |"
-echo -e "|                 - Davil -                 |"
+echo -e "|                 - Hydra -                 |"
 echo -e "---------------------------------------------"
-echo -e "\033[0m"
+
 cd $THIS_DIR && sudo chmod +x tg
 lua Hydra.lua
 }
 if [ "$1" = "install" ]; then
 install
 else
-if [ ! -f ./tg ]; then
-echo -e "\033[0;31m\n~ The tg File Was Not Found In The Bot Files\n\033[0;33m"
-exit 1
-fi
+if
 cd $THIS_DIR && sudo chmod +x tg
 lua Hydra.lua
-CURL_DIR
+
 
 fi
