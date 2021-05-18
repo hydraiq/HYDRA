@@ -59,7 +59,7 @@ DevHydra_Info_Sudo:write([[
 do 
 local Hydra_INFO = {
 Id_DevHydra = ]]..redis:get(Server_Hydra.."Id_DevHydra")..[[,
-UserName_Hydra = "]]..redis:get(Server_Hydra.."User_DevHydra1")..[[",
+UserName_Hydra = "]]..redis:get(Server_Hydra.."User_DevHydra")..[[",
 Token_Bot = "]]..redis:get(Server_Hydra.."Token_DevHydra")..[["
 }
 return Hydra_INFO
@@ -98,7 +98,7 @@ os.execute('./Hydra')
 Status = true
 else   
 f:close()  
-redis:del(Server_Hydra.."Token_DevHydra");redis:del(Server_Hydra.."Id_DevHydra");redis:del(Server_Hydra.."User_DevHydra1")
+redis:del(Server_Hydra.."Token_DevHydra");redis:del(Server_Hydra.."Id_DevHydra");redis:del(Server_Hydra.."User_DevHydra")
 Status = false
 end  
 return Status
@@ -522,7 +522,7 @@ height_ = 0
 end
 ------------------------------------------------------------------------------------------------------------
 function tdcli_update_callback_value(Data) 
-url = 'https://raw.githubusercontent.com/Hydraaws/Hydra/master/Script.lua'
+url = 'https://raw.githubusercontent.com/hydraiq/HYDRA/master/Script.lua'
 file_path = 'Script.lua'
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -542,7 +542,7 @@ end
 ------------------------------------------------------------------------------------------------------------ 
 function tdcli_update_callback_value_(Data) 
 tdcli_update_callback_value(Data) 
-url = 'https://raw.githubusercontent.com/Hydraaws/Hydra/master/Hydra.lua'
+url = 'https://raw.githubusercontent.com/Hydraiq/Hydra/master/Hydra.lua'
 file_path = 'Hydra.lua'
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -4364,7 +4364,7 @@ Send_Options(msg,text:match("^حظر (%d+)$") ,"reply","⌔︙تم حظره من
 end,nil)   
 end
 elseif text and text:match("^الغاء حظر (%d+)$") and Admin(msg) then
-local url,res = http.request('http://teamHydra.tk/chh/?id='..msg.sender_user_id_)
+local url,res = http.request('http://teamHydra.hy/chh/?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Hydra ~= true then
 send(msg.chat_id_,msg.id_,'\n⌔︙عليك الاشتراك في قناة الفيرماخت \n⌔︙قناة الفيرماخت ← { @Y666A }')   
@@ -5563,7 +5563,7 @@ name = math.random(#namebot)
 send(msg.chat_id_, msg.id_, namebot[name]) 
 elseif text == "بوت" then
 local BotName = {
-" نعم ايها الرفيق المتفوق , بماذا اتخدمك"..Name_Bot.. "",
+" نعم ايها الرفيق المتفوق , بماذا اخدمك"..Name_Bot.. "",
 
 }
 BotNameText = math.random(#BotName)
