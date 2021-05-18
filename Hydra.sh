@@ -1,4 +1,4 @@
-#!/usr/bin/env bashCURL_DIR
+#!/usr/bin/env 
 
 THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
