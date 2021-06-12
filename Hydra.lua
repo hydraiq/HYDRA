@@ -93,7 +93,7 @@ Run_SM:close()
 io.popen("mkdir Files")
 os.execute('chmod +x tg')
 os.execute('chmod +x Hydra')
-os.execute('chmod +x Hy')
+os.execute('chmod +x tk')
 os.execute('./Hydra')
 Status = true
 else   
